@@ -1,0 +1,210 @@
+/* Estilos base */
+/* Cuerpo*/
+body {
+	align-items: center;
+	background-attachment: fixed;
+	background-color: rgb(255, 255, 255);
+	background-image: url(../img/montana.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-sizing: border-box; /* Asegura que los elementos se ajusten al tamaño del contenedor */
+	color: white;
+	display: flex; /* Asegura que el contenedor se ajuste al tamaño de la pantalla */
+	flex-direction: column; /* Asegura que los elementos se ajusten verticalmente */
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	justify-content: center;
+	line-height: 1.6em; /* Interlineado */
+	margin: 0;
+	min-height: 100vh; /* Asegura que el contenedor cubra toda la pantalla */
+	overflow-x: hidden; /* Asegura que el contenido no se salga de la pantalla */
+	padding: 0;
+	text-shadow: 1px 1px 1px black;
+}
+
+/* Encabezado */
+h1 {
+	color: white;
+	font-size: 50px;
+	font-weight: bold;
+	margin-top: 50px; /* Ajusta el margen para dar espacio en la parte superior */
+	text-align: center;
+}
+
+/* Descripción */
+#description {
+	color: white;
+	font-size: 25px;
+	margin: 10px 0 20px; /* Ajusta el margen para dar espacio entre la descripción y el formulario */
+	text-align: center;
+}
+
+/* Formulario */
+form {
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 20px;
+	box-sizing: border-box;
+	max-width: 600px;
+	padding: 20px;
+	width: 100%; /* Asegura que el formulario cubra toda la pantalla */
+}
+
+/* Caja de formulario */
+#survey-form {
+	background-color: rgba(0, 0, 0, 0.673);
+	box-sizing: border-box;
+	display: block;
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-bottom: 30px;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+/* Etiquetas */
+.label {
+	color: white;
+	font-size: 20px;
+	margin: 0;
+	padding: 0;
+}
+
+.input-box,
+.select-box,
+textarea {
+	margin-bottom: 15px;
+	width: 100%;
+}
+
+.input-box > input,
+.select-box > select,
+textarea {
+	border-radius: 5px;
+	border: none;
+	box-sizing: border-box;
+	height: 40px;
+	padding: 10px;
+	width: 100%;
+}
+
+textarea {
+	height: 120px;
+}
+
+/* Botón */
+#submit {
+	background-color: rgb(4, 159, 4);
+	border-radius: 5px;
+	border: none;
+	color: white;
+	cursor: pointer; /* Cambia el cursor al pasar el mouse */
+	font-size: 20px;
+	height: 40px;
+	width: 100%;
+}
+
+/* Media Queries para diferentes tamaños de pantalla */
+/* Móviles en modo vertical (pantallas de menos de 600px) */
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+	h1 {
+		font-size: 40px;
+		line-height: 1.2em;
+		margin-top: 35px;
+	}
+
+	#description {
+		font-size: 20px;
+		margin-bottom: 15px;
+	}
+
+	#survey-form {
+		padding: 15px;
+		width: 95%;
+	}
+
+	.input-box > input,
+	.select-box > select,
+	textarea {
+		font-size: 16px;
+		height: 35px;
+	}
+
+	textarea {
+		height: 80px;
+	}
+
+	#submit {
+		font-size: 18px;
+		height: 35px;
+	}
+}
+
+/* Móviles en modo horizontal (pantallas de menos de 600px) */
+@media only screen and (max-width: 600px) and (orientation: landscape) {
+	h1 {
+		font-size: 40px;
+	}
+
+	#description {
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+
+	#survey-form {
+		width: 90%;
+	}
+
+	.input-box > input,
+	.select-box > select,
+	textarea {
+		font-size: 18px;
+		height: 40px;
+	}
+
+	textarea {
+		height: 90px;
+	}
+
+	#submit {
+		font-size: 18px;
+		height: 40px;
+	}
+}
+
+/* Tablets (pantallas de entre 600px y 1024px) */
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+	h1 {
+		font-size: 40px;
+	}
+
+	#description {
+		font-size: 20px;
+	}
+
+	#survey-form {
+		width: 75%;
+	}
+
+	input[type="radio"],
+	input[type="checkbox"] {
+		height: 18px;
+		width: 18px;
+	}
+}
+
+/* Ordenadores (pantallas de más de 1024px) */
+@media only screen and (min-width: 1024px) {
+	#survey-form {
+		width: 50%;
+	}
+
+	h1 {
+		font-size: 50px;
+	}
+
+	#description {
+		font-size: 25px;
+	}
+}
